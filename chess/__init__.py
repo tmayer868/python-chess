@@ -35,7 +35,12 @@ import re
 import itertools
 import typing
 
-from typing import ClassVar, Callable, Dict, Generic, Hashable, Iterable, Iterator, List, Mapping, MutableSet, Optional, SupportsInt, Tuple, Type, TypeVar, Union
+from typing import Callable, Dict, Generic, Hashable, Iterable, Iterator, List, Mapping, MutableSet, Optional, SupportsInt, Tuple, Type, TypeVar, Union
+
+try:
+    from typing import ClassVar
+except ImportError:
+    pass  # Type checking not possible before Python 3.5.3
 
 
 Color = bool
